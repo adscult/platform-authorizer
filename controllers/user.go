@@ -144,6 +144,11 @@ func (c *ApiController) GetUsers() {
 // @Success 200 {object} object.User The Response object
 // @router /get-user [get]
 func (c *ApiController) GetUser() {
+	fmt.Println("GetUser() called")
+	type MyStruct struct{}
+	empStruct := MyStruct{}
+	fmt.Println(empStruct)
+
 	id := c.Input().Get("id")
 	email := c.Input().Get("email")
 	phone := c.Input().Get("phone")
